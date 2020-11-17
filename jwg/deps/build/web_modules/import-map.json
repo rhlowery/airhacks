@@ -1,5 +1,6 @@
 {
   "imports": {
+    "@ui5/webcomponents/dist/DatePicker": "./@ui5/webcomponents/dist/DatePicker.js",
     "@vaadin/router": "./@vaadin/router.js",
     "lit-html": "./lit-html.js"
   }

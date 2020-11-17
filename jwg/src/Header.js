@@ -1,13 +1,19 @@
 import { html, render } from "./lit-html.js";
+import "./@ui5/webcomponents/dist/DatePicker.js";
 
-class Header extends HTMLElement { 
+class Header extends HTMLElement {
 
-    connectedCallback() { 
+    connectedCallback() {
         const template = html`
-            <button @click="${_=>this.load()}">click</button>
+        <ui5-date-picker @change="${e => this.nextDoagConf(e)}" id="myDatepicker1"></ui5-date-picker>
+            <button @click="${_ => this.load()}">click</button>
             <h2>Hello, DOAG, vielleicht Oracle</h2>
         `;
-        render(template,this);
+        render(template, this);
+    }
+
+    nextDoagConf({ detail: { value } }){
+        console.log(value);
     }
 
     async load() { 
