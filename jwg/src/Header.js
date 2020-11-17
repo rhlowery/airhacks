@@ -5,7 +5,7 @@ class Header extends HTMLElement {
     connectedCallback() { 
         const template = html`
             <button @click="${_=>this.load()}">click</button>
-            <h2>Hello, DOAG, vielleicht Oracle ${this.attributes['msg'].name}!</h2>
+            <h2>Hello, DOAG, vielleicht Oracle</h2>
         `;
         render(template,this);
     }
